@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-icon": "/miniprogram_npm/@vant/weapp/dist/icon/index",
+    "van-rate": "/miniprogram_npm/@vant/weapp/dist/rate/index"
+  },
+  "navigationBarTitleText": "选择茶室"
+}

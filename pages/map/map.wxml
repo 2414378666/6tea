@@ -1,0 +1,22 @@
+<map id="map" scale="16" controls="{{controls}}" markers="{{markers}}" bindmarkertap="markertap" show-location longitude='{{centerX}}' latitude='{{centerY}}' class='mapv'>
+
+  <cover-view class="van-buttons" bindtap="clickButtom">
+    <cover-image src="../../img/QQyuyue20201118103509.png"></cover-image>
+  </cover-view>
+  <cover-view class="pitch kefu" bindtap="keFu">
+    <cover-image src="../../img/QQkefu20201118103323.png"></cover-image>
+  </cover-view>
+  <cover-view  bindtap="moveTolocation" class="dinwei pitch">
+    <cover-image src="../../img/QQdingwei20201118103441.png"></cover-image>
+  </cover-view>
+  <cover-view class="pitch2 kaimen" bindtap="dingDan">
+    <cover-image src="../../img/QQkaimen20201118103407.png"></cover-image>
+  </cover-view>
+  <cover-view class="pitch2 xudan" bindtap="dingDan">
+    <cover-image src="../../img/QQxudan20201118103429.png"></cover-image>
+  </cover-view>
+  <view class="wcxdd {{flagWcxdd ? '' : 'wcxdd2'}}">
+    未查询到订单
+  </view>
+</map>
+

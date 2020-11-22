@@ -1,0 +1,176 @@
+.container {
+  background-color: #F3F4F5;
+  padding: 0 20rpx;
+}
+.swiperImg {
+  width: 100%;
+  height: 100%;
+}
+.swiperItem {
+  position: relative;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+/* .count {
+  position: absolute;
+  right: 40rpx;
+  bottom: 30rpx;
+  display: inline-block;
+  padding: 6rpx 20rpx;
+  border-radius: 30rpx;
+  background-color: #7A7B7B;
+  color: #fff;
+  opacity: .5;
+}
+} */
+.title {
+  margin-top: 10rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.titleButtom {
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #F3F4F5;
+}
+.location {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+.texta {
+  font-weight: 700;
+  color: #389DA2;
+}
+.middle {
+  padding-right: 40rpx;
+  border-right: 2rpx solid #F3F4F5;
+}
+.times {
+  padding:10rpx 0 10rpx 36rpx; 
+  background-color:#FFF3E5; 
+  margin: 14rpx 30rpx;  
+  color: #67BFC3; 
+  font-weight: 700;
+  font-size: 32rpx;
+}
+.statement {
+  height: 1400rpx;
+  width: 100%;
+  margin-top: 10rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  /* overflow: hidden; */
+}
+.statement image {
+  height: 100%;
+  width: 100%;
+}
+.yearTime {
+  display: flex;
+}
+.week {
+  font-size: 24rpx;
+}
+.date {
+  flex: 1;
+  text-align: center;
+  color: #999999;
+  padding: 16rpx 0;
+  background-color: #D7EBEC;
+}
+.bgcColor {
+  background-color: #379DA2;
+  color: #fff;
+}
+.hmFater {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12rpx;
+  padding-bottom: 40rpx;
+}
+.hm {
+  border-radius: 10rpx;
+  padding: 14rpx 34rpx;
+  margin: 10rpx;
+  background-color: #D7EBEC;
+}
+.colors {
+  background-color: #379DA2;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 100rpx;
+  z-index: 1000;
+}
+.bottom view {
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+}
+.bottom view:nth-child(1) {
+  background-color: #EBF8F8;
+  color: #379DA2;
+}
+.bottom view:nth-child(2) {
+  background-color: #379DA2;
+  color: #fff;
+}
+.shop {
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  display: flex;
+  border-radius: 90rpx;
+  overflow: hidden;
+  margin: 0 30rpx;
+}
+.monyText {
+  font-weight: 700; 
+  font-size: 44rpx;
+}
+.zongse {
+  background-color: #4A4A5D;
+  padding: 30rpx;
+  flex-grow: 7;
+}
+.rightText {
+  flex-grow: 3;
+  background-color: #379DA2;
+  text-align: center;
+  line-height: 117rpx;
+  font-weight: 700;
+  color: #fff;
+}
+.showJin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 20rpx;
+  color: #fff;
+  font-size: 34rpx;
+  background-color: #379DA2;
+}
+.iconjingao {
+  position: relative;
+  top: 10rpx;
+  margin-right: 10rpx;
+}
+.closeStyle {
+  position: absolute;
+  top: 20rpx;
+  right: 40rpx;
+}
+.brwon {
+  pointer-events: none;
+  background-color: #B3B3B3;
+  color: #fff;
+}

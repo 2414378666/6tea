@@ -1,0 +1,128 @@
+.mapv {
+  position: relative;
+  width: 100%;
+  height: 1334rpx;
+}
+.van-buttons {
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  line-height: 90rpx;
+  width: 370rpx;
+}
+.shop {
+  margin-right: 20rpx;
+}
+.pitch {
+  position: absolute;  
+  left: 40rpx;
+  padding: 20rpx;
+  border-radius: 50% 50%;
+  background-color: #ffffff;
+}
+.pitchz {
+  position: relative;  
+  right: -600rpx;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pitch2 {
+  top: 60% ;
+  background-color: #fff;
+}
+.pitch3 {
+  top: 40% ;
+  background-color: #BE8C4B;
+  color: #fff;
+  align-content: flex-end;
+}
+.xudan2 {
+  margin-top: 10rpx;
+}
+.xudan3 {
+  margin-top: 10rpx;
+}
+.dinwei {
+  top: 60%;
+}
+.kefu {
+  top: 50%;
+}
+.textButton {
+  position: relative;
+  top: -16rpx;
+  font-size: 36rpx;
+}
+.buttomF {
+  background-color: #379DA2;
+  border-radius: 60rpx;
+  padding-top: 25rpx;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* 这是预约茶室的按钮样式 */
+.van-buttons {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 370rpx;
+  border-radius: 60rpx;
+}
+.van-buttons cover-image {
+  height: 100rpx;
+}
+/* 这是左边两个icon的样式 */
+.pitch {
+  position: absolute;  
+  left: 80rpx;
+  padding: 20rpx;
+  border-radius: 50% 50%;
+  width: 70rpx;
+  height: 70rpx;
+  background-color: #ffffff;
+}
+.dinwei {
+  top: 65%;
+}
+.kefu {
+  top: 55%;
+}
+/* 这是右边两个icon的样式 */
+.pitch2 {
+  position: absolute;  
+  right: 80rpx;
+  padding: 20rpx;
+  border-radius: 50% 50%;
+  width: 70rpx;
+  height: 70rpx;
+  background-color: #ffffff;
+}
+.kaimen {
+  top: 65%;
+  background-color: #BE8C4B;
+}
+.xudan {
+  top: 55%;
+}
+/* 这是点击消失出现组件的样式 */
+.wcxdd {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 26rpx;
+  background-color: #222;
+  color: #fff;
+  padding: 15rpx;
+  opacity:0.7;
+}
+.wcxdd2 {
+  display: none;
+}

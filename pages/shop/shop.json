@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/@vant/weapp/dist/button",
+    "van-icon": "/miniprogram_npm/@vant/weapp/dist/icon",
+    "van-rate": "/miniprogram_npm/@vant/weapp/dist/rate",
+    "van-popup": "/miniprogram_npm/@vant/weapp/dist/popup"
+  },
+  "navigationBarTitleText": "茶室详情"
+}

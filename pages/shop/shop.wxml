@@ -1,0 +1,86 @@
+<wxs module="m1">
+  var getSelect = function (arr, index) {
+    for(var i=0; i<arr.length; i++) {
+      if(index>=arr[i].hm1 && index<=arr[i].hm2) {
+        return true
+      }
+    }
+  }
+  module.exports.getSelect = getSelect
+</wxs>
+<!-- wxml语法区域 -->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper" class="swiperItem">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+        bindtransition="bindtransition">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <!-- 轮播图图片 -->
+            <image class="swiperImg" src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <!-- <text class="count">{{number}}/{{allNumber}}</text> -->
+    </view>
+  </view>
+  <view class="title">
+    <view style="text-align: center; font-weight: 700; font-size: 35rpx;">{{obj.name}}</view>
+    <view class="titleButtom">
+      <van-rate
+        value="5"
+        size="30rpx"
+        color="#FFD21E"
+        void-color="#eee"
+        void-icon="star"
+        bind:change="onChange"
+      />
+      <text>
+        <text style="margin-left: 10rpx; font-size: 35rpx;">{{obj.sold}}</text>
+        <text style="float: right; margin-right: 30rpx; font-size: 35rpx;">{{obj.mony}}元/小时</text>
+      </text>
+    </view>
+    <view class="location">
+      <van-icon class="icon" name="location-o" color="#67BFC3" size="40rpx"/>
+      <text style="font-size: 24rpx;" class="middle">仓山万达广场SOHO区 C2#1513\n距离您 <text class="texta">1568.5Km </text> 驾车 <text class="texta">1499.9分钟</text></text>
+      <van-icon name="phone-o" size="60rpx" color="#67BFC3" bindtap="callPhone" />
+    </view>
+  </view>
+  <view class="title">
+    <view style="font-weight: 700; text-align: center;"><van-icon name="underway-o" color="#67BFC3" /> 选择预定时间</view>
+    <view class="times" bindtap="selectTime"> {{dateNowG}} <van-icon name="arrow-down" color="#67BFC3" /></view> 
+  </view>
+  <view class="statement">
+    <image src="../../img/微信图片_20201114175037.jpg"></image>
+    <!-- 最下方声明大图区域 -->
+    <image src="../../img/bottomimg.jpg"></image>
+  </view>
+  <van-popup class="popup" show="{{ show }}" bind:close="onClose" >
+    <view style="width: 740rpx; height: 1100rpx;">
+      <view style="padding: 20rpx 0 20rpx 40rpx;">
+        <view style="color: #FF900A; font-weight: 700;"><van-icon name="volume-o" color="#67BFC3" />【一小时起预定】灰色为已被预订</view>
+        <view wx:if="{{timiFlag}}" class="showJin"><van-icon name="warning-o" class="iconjingao"  size="20px" />该门店预定时间不能小于一小时 <van-icon name="close" class="closeStyle" bindtap="closeJingao" /></view>
+      </view>
+      <view class="yearTime">
+        <text class="date {{thisNum == index ? 'bgcColor' : ''}}" wx:for="{{dates}}" wx:key="index" bindtap="clickTap" data-index="{{index}}">{{item.mouth+1}}月{{item.date}}日\n<text class="week">星期{{item.day}}</text>
+      </text>
+        <view class="date" bindtap="clickSkip"><van-icon name="calendar-o" size="50rpx" /><text     class="week">\n其他日期</text>
+        </view>
+      </view>
+      <view class="hmFater">
+        <view wx:for="{{dates2}}" wx:key="index" class="hm {{thisHm.hm1<=index && thisHm.hm2>=index ? 'colors' : ''}} {{m1.getSelect(arrSelect2, index) ? 'brwon' : ''}}" bindtap="clickhm" data-index="{{index}}">
+          {{item.hours}}:{{item.minutes}}
+        </view>
+      </view>
+    </view>
+  </van-popup>
+  <view class="bottom" wx:if="{{ show }}">
+    <view bindtap="clickShow">取消</view>
+    <view bindtap="clickShow" data-index="1">确定({{time}})小时</view>
+  </view>
+  <view class="shop" wx:if="{{ !show }}">
+    <view class="zongse" style="color: #fff;"><text>￥</text><text class="monyText">{{obj.mony * time}}</text><text style="margin-left: 24rpx;">共{{time}}小时</text></view>
+    <view class="rightText">去结算</view>
+  </view>
+</view>

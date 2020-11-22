@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "查看启动日志",
+  "usingComponents": {
+    "van-rate": "/miniprogram_npm/@vant/weapp/dist/rate/index"
+  }
+}

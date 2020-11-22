@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="card">
+    <view style="height: 380rpx;">
+      <image class="img" src="../../img/u=3719785138,3852354700&fm=26&gp=0.jpg"></image> 
+    </view>
+    <view class="texts" wx:if="{{flag}}">
+      <view class="option" 
+        wx:for="{{teaList}}"
+        wx:key="name" 
+        bindtap="tapBind"
+        data-name="{{ item.name }}"
+        data-sold="{{ item.sold }}"
+        data-mony="{{ item.mony }}" >
+        <view class="sonBox">
+          <cover-image src="{{item.url}}"></cover-image>
+        </view>
+        <text class="title">{{item.name}}</text>
+        <view class="evaluate">
+          <van-rate
+            value="{{ value }}"
+            size="28rpx"
+            color="#FFBE10"
+            void-color="#eee"
+            void-icon="star"
+            readonly
+          />
+          <text>{{item.sold}}</text>
+        </view>
+        <view class="monys">
+          <text style="font-weight: 700; font-size: 32rpx;">￥{{item.mony}}<text style="font-weight: 400; font-size: 24rpx;">/小时</text></text>
+          <text>推荐4-6人</text>
+        </view>
+      </view>
+    <view class="text" bindtap="lookTea">
+      收起茶厅
+      <van-icon name="arrow-up" size="36rpx" />
+    </view>
+    </view>
+    <view class="texts" wx:else bindtap="lookTea">
+      <view class="text">查看茶厅
+        <van-icon name="arrow-down" />
+      </view>
+    </view>
+  </view>
+</view>

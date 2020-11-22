@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/@vant/weapp/dist/button",
+    "van-icon": "/miniprogram_npm/@vant/weapp/dist/icon",
+    "van-toast": "/miniprogram_npm/@vant/weapp/dist/toast"
+  },
+  "navigationBarTitleText": "6茶共享茶室"
+}
